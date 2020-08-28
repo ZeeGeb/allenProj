@@ -14,6 +14,7 @@ function App() {
       <Router>
           <Switch>  
             <Route path='/test' component={Test}/>
+            <Route path='/create' component={Test}/>
             <Route path='/' component={Login}/>
             <Route path="*" component={() => "404 NOT FOUND"} />
           </Switch>
