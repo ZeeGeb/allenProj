@@ -20,6 +20,7 @@ import { TextField } from 'formik-material-ui';
 //import auth from './AuthService';
 import Cookie from "js-cookie";
 import './index.css';
+import {post} from '../connection';
 import { createMuiTheme } from '@material-ui/core/styles';
 
 const styles = theme => ({
@@ -101,6 +102,12 @@ class Login extends Component {
         validateOnChange={true}
         onSubmit={(values, { setSubmitting }) => {
             
+			const names = ["username", "password"];
+			const vals = [values.username, values.password];
+
+			post("login", names, vals).then((res) => {
+				alert("successfully loged in");
+			});
           /*  const data = {
               username: values.username,
               password: values.password
@@ -150,7 +157,7 @@ class Login extends Component {
           //setSubmitting(false);
           setTimeout(() => {
             setSubmitting(false);
-            /*console.log(values);
+            *console.log(values);
             alert(JSON.stringify(values, null, 2));*/
        //   }, 500);
         }}
