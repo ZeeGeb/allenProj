@@ -15,9 +15,22 @@ class addTask extends Component {
         return (
             <>
                 <label for="taskname">Task Name</label>
-                <input type="text" id="taskname" name="taskname" value={this.state.projname} onChange={this.handleChangeTask}/><br></br>
+                <input type="text" id="taskname" name="taskname" value={this.state.taskname} onChange={this.handleChangeTask}/><br></br>
                 <label for="personincharge">Responsible Person</label>
-            	<button onClick={this.submit}>Submit</button>
+                <input type="text" id="personincharge" name="personincharge" value={this.state.personincharge} onChange={this.handleChangeTask}/><br></br>
+                <label for="packagemanger">Package Manger</label>
+                <input type="text" id="packagemanger" name="packagemanger" value={this.state.packagemanger} onChange={this.handleChangeTask}/><br></br>
+                <label for="startdate">Start Date</label>
+                <input type="text" id="startdate" name="startdate" value={this.state.startdate} onChange={this.handleChangeTask}/><br></br>
+            	<label for="duration">Duration</label>
+                <input type="text" id="duration" name="duration" value={this.state.duration} onChange={this.handleChangeTask}/><br></br>
+                <label for="enddate">End Date</label>
+                <input type="text" id="enddate" name="enddate" value={this.state.enddate} onChange={this.handleChangeTask}/><br></br>
+                <label for="tastresources">Task Resources</label>
+                <input type="text" id="taskresources" name="taskresources" value={this.state.taskresources} onChange={this.handleChangeTask}/><br></br>
+                <label for="taskprogress">Task progress</label>
+                <input type="text" id="taskprogress" name="taskprogress" value={this.state.taskprogress} onChange={this.handleChangeTask}/><br></br>
+                <button onClick={this.submit}>Submit</button>
 				<p>{this.state.response}</p>
 			</>
         )
